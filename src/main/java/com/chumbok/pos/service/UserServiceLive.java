@@ -1,53 +1,45 @@
 package com.chumbok.pos.service;
 
-import com.chumbok.pos.IUserDAO;
-import com.chumbok.pos.User;
+import com.chumbok.pos.entity.User;
+import com.chumbok.pos.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * Created by Dell on 06-Jul-17.
- */
 @Transactional
 @Service
 public class UserServiceLive implements UserService {
-    //--------------------------------------------------------------------------
-    @Autowired
-    private IUserDAO userDAO;
 
-    //--------------------------------------------------------------------------getUserById
+    @Autowired
+    private UserRepository userRepository;
+
     @Override
-    public User getUserById(long userId) {
-        User obj = userDAO.getUserById(userId);
-        return obj;
+    public User getUser(long userId) {
+        return userRepository.findOne(userId);
     }
 
-    //--------------------------------------------------------------------------getAllUsers
     @Override
     public List<User> getAllUsers() {
-        return userDAO.getAllUsers();
+        return userRepository.findAll();
     }
 
-    //--------------------------------------------------------------------------createUser
     @Override
     public User createUser(User user) {
 
-        if (userDAO.isUserExists(user.getEmail())) {
+        if (userRepository.isUserExists(user.getEmail())) {
             throw new IllegalArgumentException("Email already exists.");
         }
 
-        userDAO.addUser(user);
+        userRepository.save(user);
         return user;
     }
 
-    //--------------------------------------------------------------------------updateUser
     @Override
     public void updateUser(User user) {
 
-        User userById = getUserById(user.getId());
+        User userById = getUser(user.getId());
 
         userById.setFirstName(user.getFirstName());
         userById.setLastName(user.getLastName());
@@ -55,13 +47,11 @@ public class UserServiceLive implements UserService {
         userById.setDateOfBirth(user.getDateOfBirth());
         userById.setEnable(user.isEnable());
 
-        userDAO.updateUser(user);
+        userRepository.save(user);
     }
 
-    //--------------------------------------------------------------------------deleteUser
     @Override
     public void deleteUser(long userId) {
-        userDAO.deleteUser(userId);
+        userRepository.delete(userId);
     }
-    //--------------------------------------------------------------------------
 }

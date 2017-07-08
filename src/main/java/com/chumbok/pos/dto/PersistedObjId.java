@@ -1,8 +1,5 @@
-package com.chumbok.pos;
+package com.chumbok.pos.dto;
 
-/**
- * Created by Dell on 06-Jul-17.
- */
 public class PersistedObjId {
 
     private long id;

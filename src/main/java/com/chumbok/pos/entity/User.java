@@ -1,4 +1,4 @@
-package com.chumbok.pos;
+package com.chumbok.pos.entity;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -6,11 +6,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
-
-
-/**
- * Created by Dell on 30-May-17.
- */
 
 @Entity
 @Table(name = "User")
