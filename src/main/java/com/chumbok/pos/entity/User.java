@@ -13,25 +13,23 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
     private Long id;
 
-    @Column(name = "firstName")
     private String firstName;
 
-    @Column(name = "lastName")
+
     private String lastName;
 
-    @Column(name = "email", unique = true)
+    @Column(unique = true)
     @NotNull(message = "Email cannot be null")
     @NotEmpty(message = "Email cannot be empty")
     @Email(message = "Email not valid")
     private String email;
 
-    @Column(name = "dateOfBirth")
+
     private Date dateOfBirth;
 
-    @Column(name = "enable")
+
     private boolean enable;
 
 
