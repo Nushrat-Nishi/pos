@@ -1,7 +1,6 @@
 package com.chumbok.pos.entity;
 
 import javax.persistence.*;
-import javax.validation.constraints.Min;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -18,12 +17,10 @@ public class Stock {
     private BigDecimal purchasePrice;
     private BigDecimal salePrice;
 
-
     private Long quantiy;
 
     @ManyToOne
     private Product product;
-
 
     public Long getId() {
         return id;

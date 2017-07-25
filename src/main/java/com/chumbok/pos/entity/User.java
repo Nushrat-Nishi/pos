@@ -10,13 +10,11 @@ import java.util.Date;
 @Entity
 @Table(name = "User")
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String firstName;
-
 
     private String lastName;
 
@@ -26,12 +24,9 @@ public class User {
     @Email(message = "Email not valid")
     private String email;
 
-
     private Date dateOfBirth;
 
-
     private boolean enable;
-
 
     public Long getId() {
         return id;

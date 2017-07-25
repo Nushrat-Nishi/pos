@@ -8,7 +8,7 @@ public class StockDTO {
     private Date stockEntryDate;
     private Date stockExpireDate;
     private Long quantiy;
-    private Long  productId;
+    private Long productId;
     private BigDecimal purchasePrice;
     private BigDecimal salePrice;
 

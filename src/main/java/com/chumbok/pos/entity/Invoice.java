@@ -34,7 +34,6 @@ public class Invoice {
 
     @NotNull
     private Date invoiceDate;
-    //---------------------------------------
 
     public Long getId() {
         return id;
@@ -92,9 +91,6 @@ public class Invoice {
         this.invoiceDate = invoiceDate;
     }
 
-
-    //----------------------------------------------------------------
-
     @Override
     public String toString() {
         return "Invoice{" +
@@ -107,7 +103,4 @@ public class Invoice {
                 ", invoiceDate=" + invoiceDate +
                 '}';
     }
-
-
-//--------------------------------------------------------------
 }

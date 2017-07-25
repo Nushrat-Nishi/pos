@@ -7,8 +7,6 @@ public class InvoiceDTO {
     private Integer accountNumber;
     private Date invoiceDate;
     private Long InvoiceQuantiy;
-    //private BigDecimal UniquePrice;
-    //private Long stockId;
     private Long productId;
 
     public Integer getAccountNumber() {

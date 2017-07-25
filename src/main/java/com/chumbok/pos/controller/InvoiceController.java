@@ -1,15 +1,15 @@
 package com.chumbok.pos.controller;
 
-        import com.chumbok.pos.dto.InvoiceDTO;
-        import com.chumbok.pos.dto.PersistedObjId;
-        import com.chumbok.pos.entity.Invoice;
-        import com.chumbok.pos.service.InvoiceService;
-        import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.http.HttpStatus;
-        import org.springframework.web.bind.annotation.*;
+import com.chumbok.pos.dto.InvoiceDTO;
+import com.chumbok.pos.dto.PersistedObjId;
+import com.chumbok.pos.entity.Invoice;
+import com.chumbok.pos.service.InvoiceService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
-        import javax.validation.Valid;
-        import java.util.List;
+import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/invoices")

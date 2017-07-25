@@ -29,10 +29,6 @@ public class Product {
     @NotNull(message = "Barcode cannot be null")
     @NotEmpty(message = "Barcode cannot be empty")
     private String barcode;
-    //---------------------------------------
-    /*@OneToMany(mappedBy = "product")
-    private Set<Stock> stocks;*/
-//---------------------------------------
 
     public Long getId() {
         return id;
@@ -98,9 +94,6 @@ public class Product {
         this.barcode = barcode;
     }
 
-
-    //----------------------------------------------------------------
-
     @Override
     public String toString() {
         return "Product{" +
@@ -114,10 +107,4 @@ public class Product {
                 ", barcode='" + barcode + '\'' +
                 '}';
     }
-
-
-    //-------------------------------------------------------------------------
-
-
-//--------------------------------------------------------------
 }

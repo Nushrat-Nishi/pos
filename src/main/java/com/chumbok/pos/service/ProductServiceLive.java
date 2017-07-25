@@ -44,11 +44,9 @@ public class ProductServiceLive implements ProductService {
         productById.setDisplayName(product.getDisplayName());
         productById.setCatagory(product.getCatagory());
         productById.setBrand(product.getBrand());
-        //productById.setWholeSalePrice(product.getWholeSalePrice());
         productById.setDescription(product.getDescription());
         productById.setWeight(product.getWeight());
         productById.setBarcode(product.getBarcode());
-       // productById.setStocks(product.getStocks());
 
         productRepository.save(product);
     }

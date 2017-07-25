@@ -42,7 +42,6 @@ public class InvoiceServiceLive implements InvoiceService {
 
     @Override
     public Invoice createInvoice(InvoiceDTO invoiceDTO) {
-//accountNumber-- invoiceDate--  invoiceQuantiy--  totalPrice--  uniquePrice-- stockId--
 
         Invoice invoice = new Invoice();
 
@@ -58,9 +57,6 @@ public class InvoiceServiceLive implements InvoiceService {
             throw new IllegalArgumentException("Quantity not enough in stock. Enter less amount.");
 
         } else {
-            System.out.println("nsnss--------------------||   "+stockRepository.totalQuantityInStock(productId));
-            System.out.println("nsnss--------------------||   "+invoiceDTO.getInvoiceQuantiy());
-
             invoice.setInvoiceQuantiy(invoiceDTO.getInvoiceQuantiy());
 
             StockDTO stockDTO = new StockDTO();
@@ -68,8 +64,6 @@ public class InvoiceServiceLive implements InvoiceService {
             Long bg1, bg2;
             bg1 = invoiceDTO.getInvoiceQuantiy();
             bg2 = -Math.abs(bg1);
-
-            System.out.println("nsnss--------bg2------------||   "+bg2);
 
             stockDTO.setStockEntryDate(stock.getStockEntryDate());
             stockDTO.setStockExpireDate(stock.getStockExpireDate());

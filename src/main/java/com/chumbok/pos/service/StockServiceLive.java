@@ -22,7 +22,6 @@ public class StockServiceLive implements StockService {
     private ProductRepository productRepository;
 
 
-
     @Override
     public Stock getStock(long stockId) {
         return stockRepository.findOne(stockId);

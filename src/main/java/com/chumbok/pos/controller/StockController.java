@@ -2,7 +2,6 @@ package com.chumbok.pos.controller;
 
 import com.chumbok.pos.dto.PersistedObjId;
 import com.chumbok.pos.dto.StockDTO;
-import com.chumbok.pos.entity.Product;
 import com.chumbok.pos.entity.Stock;
 import com.chumbok.pos.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,8 +30,6 @@ public class StockController {
     public PersistedObjId createStock(@RequestBody @Valid StockDTO stockDTO) {
 
         Stock stock = stockService.createStock(stockDTO);
-        System.out.println("Stock:-----------"+stock);
-
         return new PersistedObjId(stock.getId());
     }
 
