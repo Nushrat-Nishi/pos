@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserController {
 
-    @Autowired
+   /* @Autowired
     private UserService userService;
 
     @ResponseStatus(value = HttpStatus.OK)
@@ -49,7 +49,7 @@ public class UserController {
     @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
     public void deleteUser(@PathVariable("id") Long id) {
         userService.deleteUser(id);
-    }
+    }*/
 }
 
 

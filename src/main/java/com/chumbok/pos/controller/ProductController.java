@@ -5,6 +5,7 @@ import com.chumbok.pos.entity.Product;
 import com.chumbok.pos.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -17,9 +18,13 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
     @ResponseStatus(value = HttpStatus.OK)
     @RequestMapping(path = "", method = RequestMethod.GET)
     public List<Product> getProducts() {
+        System.out.println("-----------------------"+bCryptPasswordEncoder.encode("1234"));
         List<Product> list = productService.getAllProducts();
         return list;
     }

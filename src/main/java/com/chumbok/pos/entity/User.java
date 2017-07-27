@@ -1,32 +1,40 @@
 package com.chumbok.pos.entity;
 
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.util.Set;
 
 @Entity
-@Table(name = "User")
+@Table(name = "user")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String firstName;
-
-    private String lastName;
-
     @Column(unique = true)
-    @NotNull(message = "Email cannot be null")
-    @NotEmpty(message = "Email cannot be empty")
-    @Email(message = "Email not valid")
+    @Email(message = "*Please provide a valid Email")
+    @NotEmpty(message = "*Please provide an email")
     private String email;
 
-    private Date dateOfBirth;
 
-    private boolean enable;
+    @Length(min = 5, message = "*Your password must have at least 5 characters")
+    @NotEmpty(message = "*Please provide your password")
+    private String password;
+
+    @NotEmpty(message = "*Please provide your name")
+    private String firstName;
+
+    @NotEmpty(message = "*Please provide your last name")
+    private String lastName;
+
+    private int active;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    private Set<Role> roles;
 
     public Long getId() {
         return id;
@@ -34,10 +42,6 @@ public class User {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
     }
 
     public String getEmail() {
@@ -48,20 +52,16 @@ public class User {
         this.email = email;
     }
 
-    public Date getDateOfBirth() {
-        return dateOfBirth;
+    public String getPassword() {
+        return password;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public boolean isEnable() {
-        return enable;
-    }
-
-    public void setEnable(boolean enable) {
-        this.enable = enable;
+    public String getFirstName() {
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
@@ -76,15 +76,32 @@ public class User {
         this.lastName = lastName;
     }
 
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", enable=" + enable +
+                ", active=" + active +
+                ", roles=" + roles +
                 '}';
     }
 }

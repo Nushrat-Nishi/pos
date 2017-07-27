@@ -1,57 +1,43 @@
 package com.chumbok.pos.service;
 
+import com.chumbok.pos.entity.Role;
 import com.chumbok.pos.entity.User;
+import com.chumbok.pos.repository.RoleRepository;
 import com.chumbok.pos.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+
+import java.util.Arrays;
+import java.util.HashSet;
 
 @Transactional
-@Service
+@Service("userService")
 public class UserServiceLive implements UserService {
 
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private RoleRepository roleRepository;
+
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
     @Override
-    public User getUser(long userId) {
-        return userRepository.findOne(userId);
+    public User findUserByEmail(String email) {
+        return userRepository.findByEmail(email);
     }
 
     @Override
-    public List<User> getAllUsers() {
-        return userRepository.findAll();
-    }
+    public void saveUser(User user) {
 
-    @Override
-    public User createUser(User user) {
-
-        if (userRepository.isUserExists(user.getEmail())) {
-            throw new IllegalArgumentException("Email already exists.");
-        }
-
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        user.setActive(1);
+        Role userRole = roleRepository.findByRole("ADMIN");
+        user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
         userRepository.save(user);
-        return user;
-    }
-
-    @Override
-    public void updateUser(User user) {
-
-        User userById = getUser(user.getId());
-
-        userById.setFirstName(user.getFirstName());
-        userById.setLastName(user.getLastName());
-        userById.setEmail(user.getEmail());
-        userById.setDateOfBirth(user.getDateOfBirth());
-        userById.setEnable(user.isEnable());
-
-        userRepository.save(user);
-    }
-
-    @Override
-    public void deleteUser(long userId) {
-        userRepository.delete(userId);
     }
 }

@@ -9,41 +9,68 @@ wrapper = nullable
 primitive = not nullable
 
 
+# ===============================
+# = DATA SOURCE
+# ===============================
+spring.datasource.url=jdbc:mysql://localhost:3306/pos
+spring.datasource.username=root
+spring.datasource.password=nishi
 
-    /* private final UserRepository userRepository;
+spring.datasource.testWhileIdle = true
+spring.datasource.validationQuery = SELECT 1
 
-     UserController(UserRepository userRepository) {
-         this.userRepository = userRepository;
-     }
 
-     //@Autowired
-     //private UserRepository userRepository;
+spring.datasource.tomcat.max-wait=20000
+spring.datasource.tomcat.max-active=50
+spring.datasource.tomcat.max-idle=20
+spring.datasource.tomcat.min-idle=15
 
-     @RequestMapping("/")  //http://localhost:8080/
-     public void index() {
-         User user = new User();
-         //user.setId(12345678910L);
-         user.setFirstName("Nushrat");
-         user.setLastName("Nishi");
-         user.setEmail("nishi.ict@gmail.com");
 
-         Date date = null;
-         SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
-         try {
-             date = fmt.parse("2013-05-06");
-             user.setDateOfBirth(date);
-         } catch (ParseException e) {              // Insert this block.
-             // TODO Auto-generated catch block
-             e.printStackTrace();
-         }
-         user.setDateOfBirth(date);
-         user.setEnable(true);
+# ===============================
+# = JPA / HIBERNATE
+# ===============================
+spring.jpa.show-sql = true
+spring.jpa.hibernate.ddl-auto = update
+spring.jpa.hibernate.naming-strategy = org.hibernate.cfg.ImprovedNamingStrategy
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
 
-         userRepository.save(user);
-     }
 
-     @RequestMapping("/user")  //http://localhost:8080/user
-     public List<User> showData() {
-         return userRepository.findAll();
-     }*/
-//..........................
+
+# ===============================
+# = Thymeleaf configurations
+# ===============================
+spring.thymeleaf.mode=LEGACYHTML5
+spring.thymeleaf.cache=false
+
+
+# ==============================================================
+# = Spring Security / Queries for AuthenticationManagerBuilder
+# ==============================================================
+spring.queries.users-query=select email, password, active from user where email=?
+spring.queries.roles-query=select u.email, r.role from user u inner join user_role ur on(u.user_id=ur.user_id) inner join role r on(ur.role_id=r.role_id) where u.email=?
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:3306/pos
+spring.datasource.username=root
+spring.datasource.password=nishi
+
+
+spring.datasource.tomcat.max-wait=20000
+spring.datasource.tomcat.max-active=50
+spring.datasource.tomcat.max-idle=20
+spring.datasource.tomcat.min-idle=15
+
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQLDialect
+spring.jpa.properties.hibernate.id.new_generator_mappings = false
+spring.jpa.properties.hibernate.format_sql = true
+
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+
+
+
+
