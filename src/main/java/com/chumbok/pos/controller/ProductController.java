@@ -1,58 +1,87 @@
 package com.chumbok.pos.controller;
 
 import com.chumbok.pos.dto.PersistedObjId;
+import com.chumbok.pos.dto.StockDTO;
 import com.chumbok.pos.entity.Product;
+import com.chumbok.pos.entity.Stock;
+import com.chumbok.pos.entity.User;
 import com.chumbok.pos.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.util.List;
 
-@RestController
-@RequestMapping("/products")
+@Controller
 public class ProductController {
 
     @Autowired
     private ProductService productService;
 
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    @RequestMapping(path = "/product", method = RequestMethod.GET)
+    public ModelAndView showAddProductForm(@RequestParam(required = false) Long id) {
 
-    @ResponseStatus(value = HttpStatus.OK)
-    @RequestMapping(path = "", method = RequestMethod.GET)
-    public List<Product> getProducts() {
-        System.out.println("-----------------------"+bCryptPasswordEncoder.encode("1234"));
-        List<Product> list = productService.getAllProducts();
-        return list;
+        ModelAndView modelAndView = new ModelAndView();
+
+        if (id!=null){
+
+            modelAndView.addObject("product", productService.getProduct(id));
+        }else{
+            modelAndView.addObject("product", new Product());
+        }
+
+        modelAndView.setViewName("product");
+        System.out.println("show products--------------------------nishi");
+        return modelAndView;
     }
 
-    @ResponseStatus(value = HttpStatus.CREATED)
-    @RequestMapping(path = "", method = RequestMethod.POST)
-    public PersistedObjId createProduct(@RequestBody @Valid Product product) {
-        productService.createProduct(product);
-        return new PersistedObjId(product.getId());
+    @RequestMapping(path = "/product", method = RequestMethod.POST)
+    public ModelAndView createUpdateProduct(@Valid Product product) {
+
+            ModelAndView modelAndView = new ModelAndView();
+
+            productService.createProduct(product);
+            modelAndView.addObject("successMessage", "Product has been registered successfully");
+
+            modelAndView.addObject("product", new Product());
+            modelAndView.setViewName("product");
+            return modelAndView;
+
     }
 
-    @ResponseStatus(value = HttpStatus.OK)
-    @RequestMapping(path = "/{id}", method = RequestMethod.GET)
-    public Product getProductById(@PathVariable("id") Integer id) {
-        Product product = productService.getProduct(id);
-        return product;
-    }
+    @RequestMapping(path = "/products", method = RequestMethod.GET)
+    public ModelAndView showProducts(@RequestParam(required = false) String displayName) {
+        if (displayName==null){
+            ModelAndView modelAndView = new ModelAndView();
 
-    @ResponseStatus(value = HttpStatus.NO_CONTENT)
-    @RequestMapping(path = "/{id}", method = RequestMethod.PUT)
-    public void updateProduct(@PathVariable("id") Long id, @RequestBody @Valid Product product) {
-        product.setId(id);
-        productService.updateProduct(product);
-    }
+            modelAndView.addObject("products", productService.getAllProducts());
+            modelAndView.setViewName("showProducts");
 
-    @ResponseStatus(value = HttpStatus.NO_CONTENT)
-    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
-    public void deleteProduct(@PathVariable("id") Long id) {
+            return modelAndView;
+        }else {
+            ModelAndView modelAndView = new ModelAndView();
+
+            modelAndView.addObject("products", productService.searchProduct(displayName));
+            modelAndView.setViewName("showProducts");
+            System.out.println("nishi-------------showProducts: "+displayName);
+            return modelAndView;
+        }    }
+
+
+//-------------------------------------------
+
+    @RequestMapping(value = "/products/doDelete", method = RequestMethod.POST)
+    public String deleteProduct(Long id) {
+
         productService.deleteProduct(id);
+
+        return "redirect:/products";
     }
 }

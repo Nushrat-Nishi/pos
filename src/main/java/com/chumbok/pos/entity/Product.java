@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 @Table(name = "Product")
 public class Product {
 
+    @Column(name = "id")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -25,7 +26,7 @@ public class Product {
     @Min(value = 0)
     private BigDecimal weight;
 
-    @Column(unique = true)
+    //@Column(unique = true)
     @NotNull(message = "Barcode cannot be null")
     @NotEmpty(message = "Barcode cannot be empty")
     private String barcode;

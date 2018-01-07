@@ -42,6 +42,7 @@ public class ProductServiceLive implements ProductService {
         Product productById = getProduct(product.getId());
 
         productById.setDisplayName(product.getDisplayName());
+        productById.setVendor(product.getVendor());
         productById.setCatagory(product.getCatagory());
         productById.setBrand(product.getBrand());
         productById.setDescription(product.getDescription());
@@ -54,5 +55,10 @@ public class ProductServiceLive implements ProductService {
     @Override
     public void deleteProduct(long productId) {
         productRepository.delete(productId);
+    }
+
+    @Override
+    public List<Product> searchProduct(String displayName) {
+        return  productRepository.findProductsByDisplayName(displayName);
     }
 }

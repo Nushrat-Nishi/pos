@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/registration.css}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<img th:src="@{/images/login.png}" />
+
+<nav class="navbar navbar-inverse navbar-fixed-top" th:fragment="header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">My project</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li th:classappend="${module == 'home' ? 'active' : ''}">
+                    <a href="#" th:href="@{/home}">Home</a>
+                </li>
+
+                <li th:classappend="${module == 'tasks-ld' ? 'active' : ''}">
+                    <a href="#" th:href="@{/products}">All Products</a>
+                </li>
+                <li th:classappend="${module == 'tasks-ld' ? 'active' : ''}">
+                    <a href="#" th:href="@{/registration}">Registration</a>
+                </li>
+                <li th:classappend="${module == 'tasks-ld' ? 'active' : ''}">
+                    <a href="#" th:href="@{/product}">Add Product</a>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/signin" th:href="@{/}">
+                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Login
+                    </a>
+                </li>
+                <li>
+                    <a href="/logout" th:href="@{#}" onclick="$('#form').submit();">
+                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Logout
+                    </a>
+                    <form style="visibility: hidden" id="form" method="post" action="#" th:action="@{/logout}"></form>
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+
+
+    </div>
+</nav>
+
+
+
+</body>
+</html>

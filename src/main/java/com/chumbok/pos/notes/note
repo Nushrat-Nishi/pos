@@ -1,8 +1,30 @@
- cd C:/Users/Dell/IdeaProjects/pos
- mvn spring-boot:run
+(1) cd C:/Users/Dell/IdeaProjects/pos
+
+ in linux: cd /media/nishi/Software\ \&\ Study/IdeaProjects/pos
+
+ (2) mvn spring-boot:run
 
  http://localhost:8080/users
  http://localhost/phpmyadmin
+
+ (3) open postman.
+ POST: localhost:8080/login
+ in Body:
+ username : nishi.ict@gmail.com
+ password : 1234
+
+ POST : localhost:8080/users
+ Body -> form-data select
+
+ (4) In Linux, if :
+The Tomcat connector configured to listen on port 8080 failed to start.
+The port may already be in use or the connector may be misconfigured.
+---this happens then how to stop the port?
+
+
+
+
+$2a$10$UnbiyyN18Bv2WCggE9aTpu.q5GUobZX.kTL2MErk6lYkw7JHFN/7a
 
 
 wrapper = nullable
@@ -70,7 +92,36 @@ spring.jpa.properties.hibernate.format_sql = true
 
 logging.level.org.hibernate.SQL=DEBUG
 logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+---------------------------------------------------------------------
+
+form:
+
+    @ResponseStatus(value = HttpStatus.CREATED)
+    @RequestMapping(path = "/addProduct", method = RequestMethod.POST)
+    public ModelAndView createProduct(@Valid Product product) {
+
+        ModelAndView modelAndView = new ModelAndView();
+
+        productService.createProduct(product);
+        modelAndView.addObject("successMessage", "Product has been registered successfully");
+
+        modelAndView.addObject("product", new Product());
+        modelAndView.setViewName("product");
+
+        return modelAndView;
+    }
 
 
+    @RequestMapping(path = "/updateProduct", method = RequestMethod.POST)
+    public ModelAndView updateProduct(Long id) {
 
+        ModelAndView modelAndView = new ModelAndView("product.html");
+        Product product = productService.getProduct(id);
+        product.setId(id);
+        productService.updateProduct(product);
 
+        modelAndView.addObject("product", product);
+        modelAndView.setViewName("product");
+
+        return modelAndView;
+    }
