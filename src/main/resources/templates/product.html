@@ -1,155 +1,164 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http:www.thymeleaf.org"
+      xmlns:layout="http:www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/main">
+
 <head>
-    <title>AddProduct</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/registration.css}"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Add Product</title>
+    <link rel="stylesheet" href="css/carousel.css" th:href="@{/css/carousel.css}"/>
+
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top" th:fragment="header">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">My project</a>
+
+<div layout:fragment="content">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="first-slide" th:src="@{/images/sky.png}" alt="Firs slide"/>  <!--nishi-->
+                <div class="container">
+                    <div class="carousel-caption text-left">
+                        <h1>Nishi</h1>
+                        <p>Hi Nishi. How are you?</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" th:href="@{/registration}" role="button">Sign up today</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="second-slide" th:src="@{/images/sky.png}" alt="Second slide"/>
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Another Nishi</h1>
+                        <p>What are you doing?</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="third-slide" th:src="@{/images/sky.png}" alt="Third slide"/>
+                <div class="container">
+                    <div class="carousel-caption text-right">
+                        <h1>Mahmood</h1>
+                        <p>What are you doing man?</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" th:href="@{/pageable(page=0, size=5, sort=id)}" role="button">Browse gallery</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li th:classappend="${module == 'home' ? 'active' : ''}">
-                    <a href="#" th:href="@{/home}">Home</a>
-                </li>
-
-                <li th:classappend="${module == 'tasks-ld' ? 'active' : ''}">
-                    <a href="#" th:href="@{/products}">All Products</a>
-                </li>
-                <li th:classappend="${module == 'tasks-ld' ? 'active' : ''}">
-                    <a href="#" th:href="@{/registration}">Registration</a>
-                </li>
-                <li th:classappend="${module == 'tasks-ld' ? 'active' : ''}">
-                    <a href="#" th:href="@{/product}">Add Product</a>
-                </li>
-
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="/signin" th:href="@{/}">
-                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Login
-                    </a>
-                </li>
-                <li>
-                    <a href="/logout" th:href="@{#}" onclick="$('#form').submit();">
-                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Logout
-                    </a>
-                    <form style="visibility: hidden" id="form" method="post" action="#" th:action="@{/logout}"></form>
-                </li>
-            </ul>
-        </div>
-        <!--/.nav-collapse -->
-
-
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-</nav>
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <div class="container marketing">
+        <!-- START THE FEATURETTES -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <form autocomplete="off" action="#" th:action="@{/product}"
+                          th:object="${product}" method="post" class="form-horizontal"
+                          role="form">
+                        <h2>Add Product</h2>
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <label th:if="${#fields.hasErrors('id')}" th:errors="*{id}"
+                                       class="validation-message"></label>
+                                <input type="text" th:field="*{id}" placeholder="ID"
+                                       class="form-control"/>
+                            </div>
+                        </div>
 
-<img th:src="@{/images/login.png}" />
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <input type="text" th:field="*{displayName}" placeholder="Display Name"
+                                       class="form-control"/> <label
+                                    th:if="${#fields.hasErrors('displayName')}" th:errors="*{displayName}"
+                                    class="validation-message"></label>
+                            </div>
+                        </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <form autocomplete="off" action="#" th:action="@{/product}"
-                  th:object="${product}" method="post" class="form-horizontal"
-                  role="form">
-                <h2>Add Product</h2>
-                <div class="form-group">
-                    <div class="col-sm-9">
-                        <label th:if="${#fields.hasErrors('id')}" th:errors="*{id}"
-                               class="validation-message"></label>
-                        <input type="text" th:field="*{id}" placeholder="ID"
-                               class="form-control"/>
-                    </div>
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <label th:if="${#fields.hasErrors('vendor')}" th:errors="*{vendor}"
+                                       class="validation-message"></label>
+                                <input type="text" th:field="*{vendor}"
+                                       placeholder="Vendor" class="form-control"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <input type="text" th:field="*{catagory}"
+                                       placeholder="Catagory" class="form-control"/> <label
+                                    th:if="${#fields.hasErrors('catagory')}" th:errors="*{catagory}"
+                                    class="validation-message"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <input type="text" th:field="*{brand}"
+                                       placeholder="Brand" class="form-control"/> <label
+                                    th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}"
+                                    class="validation-message"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <input type="text" th:field="*{description}"
+                                       placeholder="Description" class="form-control"/> <label
+                                    th:if="${#fields.hasErrors('description')}" th:errors="*{description}"
+                                    class="validation-message"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <input type="text" th:field="*{weight}"
+                                       placeholder="Weight" class="form-control"/> <label
+                                    th:if="${#fields.hasErrors('weight')}" th:errors="*{weight}"
+                                    class="validation-message"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <input type="text" th:field="*{barcode}"
+                                       placeholder="Barcode" class="form-control"/> <label
+                                    th:if="${#fields.hasErrors('barcode')}" th:errors="*{barcode}"
+                                    class="validation-message"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-9">
+                                <button type="submit" class="btn btn-primary btn-block">Add Product</button>
+                            </div>
+                        </div>
+
+                        <span th:utext="${successMessage}"></span>
+
+
+                    </form>
                 </div>
-
-                <div class="form-group">
-                    <div class="col-sm-9">
-                        <input type="text" th:field="*{displayName}" placeholder="Display Name"
-                               class="form-control"/> <label
-                            th:if="${#fields.hasErrors('displayName')}" th:errors="*{displayName}"
-                            class="validation-message"></label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-9">
-                        <label th:if="${#fields.hasErrors('vendor')}" th:errors="*{vendor}"
-                               class="validation-message"></label>
-                        <input type="text" th:field="*{vendor}"
-                               placeholder="Vendor" class="form-control"/>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-9">
-                        <input type="text" th:field="*{catagory}"
-                               placeholder="Catagory" class="form-control"/> <label
-                            th:if="${#fields.hasErrors('catagory')}" th:errors="*{catagory}"
-                            class="validation-message"></label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-9">
-                        <input type="text" th:field="*{brand}"
-                               placeholder="Brand" class="form-control"/> <label
-                            th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}"
-                            class="validation-message"></label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-9">
-                        <input type="text" th:field="*{description}"
-                               placeholder="Description" class="form-control"/> <label
-                            th:if="${#fields.hasErrors('description')}" th:errors="*{description}"
-                            class="validation-message"></label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-9">
-                        <input type="text" th:field="*{weight}"
-                               placeholder="Weight" class="form-control"/> <label
-                            th:if="${#fields.hasErrors('weight')}" th:errors="*{weight}"
-                            class="validation-message"></label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-9">
-                        <input type="text" th:field="*{barcode}"
-                               placeholder="Barcode" class="form-control"/> <label
-                            th:if="${#fields.hasErrors('barcode')}" th:errors="*{barcode}"
-                            class="validation-message"></label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-9">
-                        <button type="submit" class="btn btn-primary btn-block">Add Product</button>
-                    </div>
-                </div>
-
-                <span th:utext="${successMessage}"></span>
-
-
-            </form>
+            </div>
         </div>
-    </div>
+        <hr class="featurette-divider"/>
+        <!-- /END THE FEATURETTES -->
+    </div><!-- /.container -->
 </div>
-
 </body>
 </html>

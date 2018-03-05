@@ -1,3 +1,41 @@
+User Name : Nushrat-Nishi
+Password : *504938*n
+
+Commands:
+
+sudo apt-get install git
+git config --global user.email "nishi.ict@gmail.com"
+git config --global user.name "Nushrat-Nishi"
+
+
+git init
+
+git remote add origin https://github.com/Nushrat-Nishi/practiceInitialCodes.git
+
+rm -rf ~/.git  (to delete .git dir in home)
+
+
+
+cd /media/nishi/Software\ \&\ Study/IdeaProjects/pos
+touch .gitignore    (linux command for creating folder. nothing to do with git.)
+
+To see the current status:
+git status
+
+To stage(select which files will be commited) the files:
+git add -A stages All
+git add . stages new and modified, without deleted
+git add -u stages modified and deleted, without new
+
+To commit:
+git commit -m "bulk commit"
+
+To push:
+git push
+
+git push origin master
+//-------------------------------------------------------------------------------
+
 (1) cd C:/Users/Dell/IdeaProjects/pos
 
  in linux: cd /media/nishi/Software\ \&\ Study/IdeaProjects/pos

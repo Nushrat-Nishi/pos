@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>image</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<h3 th:if="${#vars['flash.message']}" th:text="${#vars['flash.message']}" class="flash"></h3>
+
+    <div>
+        <h3 th:text="${page.number+1}+ ' of ' + ${page.totalpages}"/>
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th><th>Name</th><th>Image</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="image : ${page.cotent}">
+                    <td th:text="${image.id}"/>
+                    <td th:text="${image.name}"/>
+                    ?<td><img th:src="@{'/images/' +${image.name} + '/raw'}" class="thumbnail" /> </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <form method="post" enctype="multipart/form-data" action="/images">
+                <p><input type="file" name="file"/></p>
+                <p><input type="submit" name="Upload"/></p>
+            </form>
+
+    </div>
+</body>
+</html>
