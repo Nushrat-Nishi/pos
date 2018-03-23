@@ -16,4 +16,8 @@ public interface StockService {
     void updateStock(Stock stock);
 
     void deleteStock(long stockId);
+
+    Long totalQuantityInStock(Long productId);
+
+
 }

@@ -1,0 +1,184 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http:www.thymeleaf.org"
+      xmlns:layout="http:www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/main">
+
+<head>
+    <title>All Products</title>
+
+    <link rel="stylesheet" href="css/carousel.css" th:href="@{/css/carousel.css}"/>
+
+</head>
+<body>
+
+<div layout:fragment="content">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="first-slide" th:src="@{/images/sky.png}" alt="Firs slide"/>  <!--nishi-->
+                <div class="container">
+                    <div class="carousel-caption text-left">
+                        <h1>Nishi</h1>
+                        <p>Hi Nishi. How are you?</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" th:href="@{/registration}" role="button">Sign up today</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="second-slide" th:src="@{/images/sky.png}" alt="Second slide"/>
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Another Nishi</h1>
+                        <p>What are you doing?</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="third-slide" th:src="@{/images/sky.png}" alt="Third slide"/>
+                <div class="container">
+                    <div class="carousel-caption text-right">
+                        <h1>Mahmood</h1>
+                        <p>What are you doing man?</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" th:href="@{/pageable(page=0, size=5, sort=id)}" role="button">Browse gallery</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <div class="container marketing">
+        <!-- START THE FEATURETTES -->
+        <div class="container">
+            <div class="col-md-6 col-md-offset-3">
+                <form action="#" th:action="@{/products}" method="get" class="form-horizontal">
+                    <p>Search By Display Name: <input type="text" name="displayName" class="form-control"/></p>
+                    <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+
+                    <h2 class="featurette-heading">Show All The Products
+                        <span class="text-muted">It'll blow your mind.</span></h2>
+                    <p class="lead">Here is all the products of this site.</p>
+
+                    <table class="table table-striped">
+                        <tr class="table-active">
+                            <th>ID</th>
+                            <th>DisplayName</th>
+                            <th>Vendor</th>
+                            <th>Catagory</th>
+                            <th>Brand</th>
+                            <th>Description</th>
+                            <th>Weight</th>
+                            <th>Barcode</th>
+                            <th>Stock Amount</th> <!--stock-->
+                            <th colspan="3" align="center">Action</th>
+                        </tr>
+
+                        <tr th:each="product : ${page.content}">
+                            <td th:text="${product.id}"></td>
+                            <td th:text="${product.displayName}"></td>
+                            <td th:text="${product.vendor}"></td>
+                            <td th:text="${product.catagory}"></td>
+                            <td th:text="${product.brand}"></td>
+                            <td th:text="${product.description}"></td>
+                            <td th:text="${product.weight}"></td>
+                            <td th:text="${product.barcode}"></td>
+                            <td th:text="${product.barcode}"></td> <!--stock-->
+                            <td>
+                                <form th:action="@{/products/doDelete}" method="post">
+                                    <input type="hidden" th:name="id" th:value="${product.id}"/>
+                                    <button class="btn btn-outline-primary" type="submit">Delete</button>
+                                </form>
+                            </td>
+                            <td>
+                                <a class="btn btn-outline-primary" th:href="@{'/product?id=' + ${product.id}}" role="button">Edit</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-outline-primary" th:href="@{'/product?id=' + ${product.id}}" role="button">Buy/Sell Product</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <span th:utext="${successMessage}"></span>
+                </div>
+            </div>
+
+
+            <div class="row">
+            <div class="form-group col-md-1">
+                <select class="form-control pagination" id="pageSizeSelect">
+                    <option th:each="size : ${pageable.pageSize}" th:text="${pageable.pageSize}"
+                            th:value="${pageable.pageSize}"
+                            th:selected="${pageable.pageSize} == ${pageable.pageSize}"></option>
+                </select>
+            </div>
+
+
+            <div th:if="${page.totalPages != 1}" class="form-group col-md-11 pagination-centered">
+                <ul class="pagination">
+
+                    <li th:class="${pageable.pageNumber == 0} ? disabled">
+                        <a class="pageLink" th:href="@{/pageable(page=0, size=${pageable.pageSize}, sort=id)}">&laquo;</a>
+                    </li>
+
+
+                    <li th:class="${pageable.pageNumber == 0} ? disabled">
+                        <a class="pageLink"
+                           th:href="@{/pageable(page=${pageable.pageNumber-1}, size=${pageable.pageSize}, sort=id)}">&larr;</a>
+                    </li>
+
+
+                    <li th:class="${pageable.pageNumber == (page - 1)} ? 'active pointer-disabled'"
+                        th:each="page : ${#numbers.sequence(0, page.totalPages-1)}">
+                        <a class="pageLink" th:href="@{/pageable(page=${page}, size=${pageable.pageSize}, sort=id)}"
+                           th:text="${page+1}"></a>
+                    </li>
+
+                    <li th:class="${pageable.pageNumber -1 == 0} ? 'active pointer-disabled'">
+                        <a class="pageLink"
+                           th:href="@{/pageable(page=${pageable.pageNumber -1}, size=${pageable.pageSize}, sort=id)}"></a>
+                    </li>
+
+
+                    <li th:class="${pageable.pageNumber + 1 == page.totalPages} ? disabled">
+                        <a class="pageLink"
+                           th:href="@{/pageable(page=${pageable.pageNumber + 1}, size=${pageable.pageSize}, sort=id)}">&rarr;</a>
+                    </li>
+
+
+                    <li th:class="${pageable.pageNumber + 1 == page.totalPages} ? disabled">
+                        <a class="pageLink"
+                           th:href="@{/pageable(page=${page.totalPages-1}, size=${pageable.pageSize}, sort=id)}">&raquo;</a>
+                    </li>
+
+                </ul>
+            </div>
+            </div>
+        </div>
+        <hr class="featurette-divider"/>
+        <!-- /END THE FEATURETTES -->
+    </div><!-- /.container -->
+</div>
+</body>
+</html>

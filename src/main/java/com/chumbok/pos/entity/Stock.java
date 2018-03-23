@@ -1,5 +1,7 @@
 package com.chumbok.pos.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -10,8 +12,9 @@ public class Stock {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    //@DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date stockEntryDate;
+    //@DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date stockExpireDate;
 
     private BigDecimal purchasePrice;

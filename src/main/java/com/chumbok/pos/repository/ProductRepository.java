@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Product, Long> {
+public interface ProductRepository extends JpaRepository<Product, Long>, ProductRepositoryCustom {
 
     @Query("SELECT COUNT(p) > 0 FROM Product p WHERE barcode = ?")
     boolean isProductExists(String barcode);

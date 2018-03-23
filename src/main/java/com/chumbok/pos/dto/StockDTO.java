@@ -1,11 +1,15 @@
 package com.chumbok.pos.dto;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
 
 public class StockDTO {
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date stockEntryDate;
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date stockExpireDate;
     private Long quantiy;
     private Long productId;

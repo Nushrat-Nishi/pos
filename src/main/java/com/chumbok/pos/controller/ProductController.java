@@ -1,28 +1,18 @@
 package com.chumbok.pos.controller;
 
-import com.chumbok.pos.dto.PersistedObjId;
-import com.chumbok.pos.dto.StockDTO;
 import com.chumbok.pos.entity.Product;
-import com.chumbok.pos.entity.Stock;
-import com.chumbok.pos.entity.User;
 import com.chumbok.pos.service.ProductService;
+import com.chumbok.pos.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.repository.query.Param;
-import org.springframework.http.HttpStatus;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
-
-import org.springframework.data.domain.Pageable;
-
 import java.util.List;
 
 @Controller
@@ -31,9 +21,12 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    @Autowired
+    private StockService stockService;
+
     @RequestMapping(path = "/product", method = RequestMethod.GET)
     public ModelAndView showAddProductForm(@RequestParam(required = false) Long id) {
-
+        System.out.println("get product");
         ModelAndView modelAndView = new ModelAndView();
 
         if (id != null) {
@@ -50,7 +43,7 @@ public class ProductController {
 
     @RequestMapping(path = "/product", method = RequestMethod.POST)
     public ModelAndView createUpdateProduct(@Valid Product product) {
-
+        System.out.println("post product");
         ModelAndView modelAndView = new ModelAndView();
 
         productService.createProduct(product);
@@ -88,8 +81,16 @@ public class ProductController {
         ModelAndView modelAndView = new ModelAndView();
         Page<Product> productList = productService.findAllByPage(pageable);
 
+        for (Product product : productList) {
+            product.getId();
+
+        }
+
+        Long k = stockService.totalQuantityInStock(1l);
+
         modelAndView.addObject("page", productList);
         modelAndView.addObject("pageable", pageable);
+        modelAndView.addObject("stockQuantity", pageable);
         modelAndView.setViewName("productPagination");
         return modelAndView;
     }
@@ -99,9 +100,9 @@ public class ProductController {
     @RequestMapping(value = "/products/doDelete", method = RequestMethod.POST)
     public String deleteProduct(@RequestParam(required = false) List<Long> ids, Long id) {
 
-        if (ids==null){
+        if (ids == null) {
             productService.deleteProduct(id);
-        }else {
+        } else {
             productService.deleteBulkProduct(ids);
         }
 

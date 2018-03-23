@@ -2,14 +2,13 @@ package com.chumbok.pos.service;
 
 import com.chumbok.pos.entity.Product;
 import com.chumbok.pos.repository.ProductRepository;
+import com.chumbok.pos.repository.StockRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.data.domain.Pageable;
+
 import java.util.List;
 
 @Transactional
@@ -18,6 +17,8 @@ public class ProductServiceLive implements ProductService {
 
     @Autowired
     private ProductRepository productRepository;
+    @Autowired
+    private StockRepository stockRepository;
 
     @Override
     public Product getProduct(long productId) {
@@ -40,7 +41,12 @@ return product;
 
    public Page<Product> findAllByPage(Pageable pageable){
        Page<Product> products =  productRepository.findAll(pageable);
-        return products;
+
+
+       for (Product product : products) {
+           stockRepository.totalQuantityInStock(product.getId());
+       }
+       return products;
     }
 
 

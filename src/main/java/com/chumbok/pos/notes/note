@@ -10,7 +10,7 @@ git config --global user.name "Nushrat-Nishi"
 
 git init
 
-git remote add origin https://github.com/Nushrat-Nishi/practiceInitialCodes.git
+git remote add origin https://github.com/Nushrat-Nishi/pos.git
 
 rm -rf ~/.git  (to delete .git dir in home)
 

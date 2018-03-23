@@ -71,4 +71,9 @@ public class StockServiceLive implements StockService {
     public void deleteStock(long stockId) {
         stockRepository.delete(stockId);
     }
+
+    @Override
+    public Long totalQuantityInStock(Long productId) {
+        return stockRepository.totalQuantityInStock(productId);
+    }
 }
