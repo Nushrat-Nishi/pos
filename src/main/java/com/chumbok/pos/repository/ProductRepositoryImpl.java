@@ -15,11 +15,10 @@ public class ProductRepositoryImpl implements ProductRepositoryCustom {
 
     @PersistenceContext
     EntityManager entityManager;
-    @Override
-    public List<Product> getFirstNamesLike() {
 
+    @Override
+    public List<Product> getProductsWithStickQuantity() {
         Query query = entityManager.createNativeQuery("SELECT * FROM product p INNER JOIN (SELECT product_id, SUM(quantiy) quantityInStock FROM stock GROUP BY product_id) ps ON p.id =ps.product_id", Product.class);
-        //query.setParameter(1, productId + "%");
         return query.getResultList();
     }
 }

@@ -25,6 +25,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Value("${spring.queries.roles-query}")
     private String rolesQuery;
     @Autowired
+    @Qualifier("dataSource")
     private DataSource dataSource;
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -68,6 +69,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         web
                 .ignoring()
-                .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**", "/registration", "/favicon.ico");
+                .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**", "/registration", "/favicon.ico", "home");
     }
 }

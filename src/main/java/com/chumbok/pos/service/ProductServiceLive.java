@@ -43,10 +43,20 @@ return product;
        Page<Product> products =  productRepository.findAll(pageable);
 
 
-       for (Product product : products) {
-           stockRepository.totalQuantityInStock(product.getId());
-       }
        return products;
+    }
+
+    @Override
+    public Page<Product> findProductWithStockQuantityByPage(Pageable pageable) {
+
+        List<Product> listOfProductWithStockQuantity = productRepository.getProductsWithStickQuantity();
+
+        //Page<Product> products =  productRepository.getProductsWithStickQuantity(pageable);
+
+        for (Product product : listOfProductWithStockQuantity) {
+            System.out.println("Product is : "+product);
+        }
+        return null;
     }
 
 

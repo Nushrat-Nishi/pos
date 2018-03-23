@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface ProductRepositoryCustom {
-    List<Product> getFirstNamesLike();
+    List<Product> getProductsWithStickQuantity();
 }

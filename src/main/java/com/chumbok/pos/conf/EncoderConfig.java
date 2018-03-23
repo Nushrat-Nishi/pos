@@ -11,8 +11,6 @@ public class EncoderConfig {
     public BCryptPasswordEncoder passwordEncoder() {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 
-        System.out.println("-----------------------password     "+bCryptPasswordEncoder.encode("12345"));
         return bCryptPasswordEncoder;
     }
-
 }
