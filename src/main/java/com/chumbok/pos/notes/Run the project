@@ -1,0 +1,16 @@
+(1) Download the pos project from git.
+(2) Go to the file: application.properties.
+(3) Change the following lines of "application.properties".:
+    spring.datasource.username=root (Use your database username)
+    spring.datasource.password=root (Use your database password)
+    spring.jpa.hibernate.ddl-auto = update (Use create for the 1st time. Then you can use update.)
+
+(4) Create a database named "pos" in your system.
+(5) To run the project select Application file. Click right button. Select "Run 'Application'".
+(6) Go to your database. in role table add 2 rows.
+    id=1 role=ADMIN
+    id=2 role=USER
+
+(7) Go to browser. The url is: http://localhost:8080/login
+(8) To login, you need to make an user 1st. So, Click the "Go To Registration Page" button in the upper side of the page.
+(9) Then with the registered user login in the system.

@@ -2,94 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09235348-7822-4768-a24b-7ff6961f1999" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/backup/StockController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/ProductRepositoryCustom.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/ProductRepositoryImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/utility/DateConversion.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/addStock.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/stockPagination.html" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_12_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_0_12_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_0_12_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_0_12_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_0_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/notes/Run the project" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/backup/home.html" afterPath="$PROJECT_DIR$/backup/home.html" />
-      <change beforePath="$PROJECT_DIR$/backup/main.html" afterPath="$PROJECT_DIR$/backup/main.html" />
-      <change beforePath="$PROJECT_DIR$/backup/productPagination.html" afterPath="$PROJECT_DIR$/backup/productPagination.html" />
-      <change beforePath="$PROJECT_DIR$/backup/showProducts.html" afterPath="$PROJECT_DIR$/backup/showProducts.html" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/Application.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/conf/EncoderConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/conf/EncoderConfig.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/conf/RESTAuthenticationEntryPoint.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/conf/RESTAuthenticationEntryPoint.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/conf/RESTAuthenticationFailureHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/conf/RESTAuthenticationFailureHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/conf/RESTAuthenticationSuccessHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/conf/RESTAuthenticationSuccessHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/conf/SecurityConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/conf/SecurityConfiguration.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/controller/ImageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/controller/ImageController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/controller/InvoiceController.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/controller/InvoiceController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/controller/LoginController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/controller/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/controller/ProductController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/controller/StockController.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/controller/StockController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/controller/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/dto/InvoiceDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/dto/InvoiceDTO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/dto/PersistedObjId.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/dto/PersistedObjId.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/dto/StockDTO.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/dto/StockDTO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/Invoice.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/Invoice.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/Product.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/Product.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/Role.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/Role.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/Stock.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/Stock.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/User.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/image.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/image.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/notes/note" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/notes/note" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/ImageRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/ImageRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/InvoiceRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/InvoiceRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/ProductRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/ProductRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/RoleRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/RoleRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/StockRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/StockRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/UserRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/ImageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/ImageService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/ImageServiceLive.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/ImageServiceLive.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/InvoiceService.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/InvoiceService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/InvoiceServiceLive.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/InvoiceServiceLive.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/ProductService.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/ProductService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/ProductServiceLive.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/ProductServiceLive.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/StockService.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/StockService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/StockServiceLive.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/StockServiceLive.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/UserServiceLive.java" afterPath="$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/UserServiceLive.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/carousel.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/carousel.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/registration.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/registration.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/header.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/image.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/image.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layouts/main.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/layouts/main.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/product.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productPagination.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/productPagination.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/result.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/result.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/showProducts.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/showProducts.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/3333.png" afterPath="$PROJECT_DIR$/src/main/webapp/images/3333.png" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/login.png" afterPath="$PROJECT_DIR$/src/main/webapp/images/login.png" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/sky.png" afterPath="$PROJECT_DIR$/src/main/webapp/images/sky.png" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,44 +18,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StockRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/StockRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ProductService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/ProductService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="note" pinned="false" current-in-tab="true">
+      <file leaf-file-name="note" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chumbok/pos/notes/note">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="62" lean-forward="true" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+            <state relative-caret-position="18">
+              <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductRepositoryCustom.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/ProductRepositoryCustom.java">
+      <file leaf-file-name="Run the project" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/chumbok/pos/notes/Run the project">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="54" lean-forward="false" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
-              <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -261,6 +173,7 @@
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/java/com/chumbok/pos/webapp</dir>
+      <dir>$PROJECT_DIR$/src/main/java/com/chumbok/pos/notes</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -274,7 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/templates/showProduct.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/registration.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/Greeting.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chumbok/pos/controller/GreetingController.java" />
@@ -308,7 +220,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/layouts/main.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/chumbok/pos/conf/SecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/product.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/Stock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chumbok/pos/entity/Product.java" />
@@ -325,6 +236,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/ProductRepositoryCustom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chumbok/pos/repository/ProductRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chumbok/pos/notes/note" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chumbok/pos/notes/Run the project" />
       </list>
     </option>
   </component>
@@ -732,51 +645,51 @@
       <workItem from="1521624585698" duration="6694000" />
       <workItem from="1521634385396" duration="11072000" />
       <workItem from="1521721261887" duration="8410000" />
-      <workItem from="1521803726692" duration="315000" />
+      <workItem from="1521803726692" duration="1495000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="329762000" />
+    <option name="totallyTimeSpent" value="330942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1368" height="749" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66926676" sideWeight="0.50292826" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17628706" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2306003" sideWeight="0.49501246" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761312" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17628706" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2306003" sideWeight="0.49501246" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16354166" sideWeight="0.50498754" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761312" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -828,7 +741,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/webjars/bootstrap/4.0.0/bootstrap-4.0.0.jar!/META-INF/resources/webjars/bootstrap/4.0.0/css/bootstrap.css" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/registration.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -924,6 +836,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10">
           <caret line="23" column="32" lean-forward="false" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -997,14 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="55" column="56" lean-forward="false" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1085,6 +990,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1092,6 +998,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="19" column="46" lean-forward="false" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1099,6 +1006,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="581">
           <caret line="76" column="41" lean-forward="true" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+          <folding>
+            <element signature="e#2114#2115#0" expanded="false" />
+            <element signature="e#2184#2185#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1106,6 +1017,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="56" column="54" lean-forward="true" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1114,7 +1028,7 @@
         <state relative-caret-position="882">
           <caret line="62" column="70" lean-forward="false" selection-start-line="62" selection-start-column="70" selection-end-line="62" selection-end-column="70" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1132,7 +1046,7 @@
         <state relative-caret-position="126">
           <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1197,15 +1111,31 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chumbok/pos/service/ProductService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chumbok/pos/notes/note">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="62" lean-forward="true" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+        <state relative-caret-position="18">
+          <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chumbok/pos/notes/Run the project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="54" lean-forward="false" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
           <folding />
         </state>
       </provider>
