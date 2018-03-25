@@ -1,5 +1,6 @@
 package com.chumbok.pos.controller;
 
+import com.chumbok.pos.dto.ProductWithStockQuantity;
 import com.chumbok.pos.entity.Product;
 import com.chumbok.pos.service.ProductService;
 import com.chumbok.pos.service.StockService;
@@ -74,27 +75,20 @@ public class ProductController {
         }
     }
 
-
     //-------------------------------------------
     @RequestMapping(value = "/pageable", method = RequestMethod.GET)
     public ModelAndView productPageable(Pageable pageable) { //Page<Product>
         ModelAndView modelAndView = new ModelAndView();
-        Page<Product> productList = productService.findAllByPage(pageable);
 
-        for (Product product : productList) {
-            product.getId();
+      //Page<Product> productList = productService.findAllByPage(pageable);
 
-        }
+        Page<ProductWithStockQuantity> pageProductListWithStockQuantity = productService.findProductWithStockQuantityByPage(pageable);
 
-        Long k = stockService.totalQuantityInStock(1l);
-
-        modelAndView.addObject("page", productList);
+        modelAndView.addObject("page", pageProductListWithStockQuantity);
         modelAndView.addObject("pageable", pageable);
-        modelAndView.addObject("stockQuantity", pageable);
         modelAndView.setViewName("productPagination");
         return modelAndView;
     }
-
 //-------------------------------------------
 
     @RequestMapping(value = "/products/doDelete", method = RequestMethod.POST)

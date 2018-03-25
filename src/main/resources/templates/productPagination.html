@@ -105,7 +105,7 @@
                             <td th:text="${product.description}"></td>
                             <td th:text="${product.weight}"></td>
                             <td th:text="${product.barcode}"></td>
-                            <td th:text="${product.barcode}"></td> <!--stock-->
+                            <td th:text="${product.quantiyInStock}"></td> <!--stock-->
                             <td>
                                 <form th:action="@{/products/doDelete}" method="post">
                                     <input type="hidden" th:name="id" th:value="${product.id}"/>

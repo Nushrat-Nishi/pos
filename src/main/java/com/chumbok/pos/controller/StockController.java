@@ -31,17 +31,9 @@ public class StockController {
         ModelAndView modelAndView = new ModelAndView();
 
         if (productId != null) {
-            /*Stock stock = stockService.getStock(productId);
-            stock.getProduct();*/
 
             StockDTO stockDTO = new StockDTO();
             stockDTO.setProductId(productId);
-
-            /*stockDTO.setPurchasePrice(stock.getPurchasePrice()*//*BigDecimal.valueOf(10).movePointLeft(2)*//*);
-            stockDTO.setSalePrice(stock.getSalePrice()*//*BigDecimal.valueOf(10).movePointLeft(2)*//*);
-            stockDTO.setQuantiy(stock.getQuantiy()*//*10l*//*);
-            stockDTO.setStockEntryDate(stock.getStockEntryDate()*//*new DateConversion().stringToDate("23/07/1989")*//*);
-            stockDTO.setStockExpireDate(stock.getStockExpireDate()*//*new DateConversion().stringToDate("12/12/1991")*//*);*/
 
             modelAndView.addObject("stockDTO", stockDTO);
         } else {
