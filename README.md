@@ -5,7 +5,7 @@ POS is a web based software, developed using the RESTful pattern. Spring Boot Fr
 ## Features!
 The users can have the following facilities by this software:
   - A database with all their products
-  - Their clients are able to add products to their virtual shopping cart
+  
   - Their clients are able to change the contents of their cart
   - Their clients are able to place an order
   - Their clients are able to supply a preferred date and time of delivery
@@ -13,6 +13,8 @@ The users can have the following facilities by this software:
 ## Limitation of current version
   - Payment system hasn't been added.
   - Buying and selling vouchar hasn't been added yet.
+  - Only shop owner can use it now. For the client side view will be added.
+  - Virtual shopping cart will be added to add products for the clients.
 
 ## Tech
 Webshop uses:
