@@ -72,9 +72,9 @@ return product;
     }
 
     @Override
-    public void updateProduct(Product product) {
+    public void updateProduct(Long id, Product product) {
 
-        Product productById = getProduct(product.getId());
+        Product productById = productRepository.findOne(id);
 
         productById.setDisplayName(product.getDisplayName());
         productById.setVendor(product.getVendor());
@@ -84,7 +84,7 @@ return product;
         productById.setWeight(product.getWeight());
         productById.setBarcode(product.getBarcode());
 
-        productRepository.save(product);
+        productRepository.save(productById);
     }
 
     @Override

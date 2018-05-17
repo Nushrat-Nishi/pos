@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -43,20 +44,27 @@ public class ProductController {
     }
 
     @RequestMapping(path = "/product", method = RequestMethod.POST)
-    public ModelAndView createUpdateProduct(@Valid Product product) {
+    public ModelAndView createUpdateProduct(@RequestParam(value = "id", required = false) Long id, @Valid Product product) {
         System.out.println("post product");
         ModelAndView modelAndView = new ModelAndView();
 
-        productService.createProduct(product);
-        modelAndView.addObject("successMessage", "Product has been registered successfully");
+        if(id==null){
+            productService.createProduct(product);
+            modelAndView.addObject("successMessage", "Product has been added successfully");
 
-        modelAndView.addObject("product", new Product());
-        modelAndView.setViewName("product");
+            modelAndView.addObject("product", new Product());
+            modelAndView.setViewName("product");
+        }else if (id!=null){
+            productService.updateProduct(id, product);
+            modelAndView.addObject("successMessage", "Product has been updated successfully");
+
+            modelAndView.addObject("product", product);
+            modelAndView.setViewName("product");
+        }
         return modelAndView;
-
     }
 
-    @RequestMapping(path = "/products", method = RequestMethod.GET)
+   /* @RequestMapping(path = "/products", method = RequestMethod.GET)
     public ModelAndView showProducts(@RequestParam(required = false) String displayName) {
         if (displayName == null) {
             ModelAndView modelAndView = new ModelAndView();
@@ -73,7 +81,7 @@ public class ProductController {
             System.out.println("nishi-------------showProducts: " + displayName);
             return modelAndView;
         }
-    }
+    }*/
 
     //-------------------------------------------
     @RequestMapping(value = "/pageable", method = RequestMethod.GET)
