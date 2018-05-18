@@ -7,7 +7,7 @@ target/
 *.ipr
 *.iws
 *.idea
-*.gitignore
+**.gitignore
 
 #IDE metadata
 **.idea/**
