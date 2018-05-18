@@ -55,7 +55,7 @@ public class ProductController {
             modelAndView.addObject("product", new Product());
             modelAndView.setViewName("product");
         }else if (id!=null){
-            productService.updateProduct(id, product);
+            productService.updateProduct(product);
             modelAndView.addObject("successMessage", "Product has been updated successfully");
 
             modelAndView.addObject("product", product);

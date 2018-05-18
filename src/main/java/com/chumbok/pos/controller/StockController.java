@@ -47,7 +47,7 @@ public class StockController {
 
     @RequestMapping(path = "/addStock", method = RequestMethod.POST)
     public ModelAndView createUpdateStock(@Valid StockDTO stockDTO) {
-        System.out.println("Nishi Post.");
+        System.out.println("Nishi Post addStock.");
 
         ModelAndView modelAndView = new ModelAndView();
 

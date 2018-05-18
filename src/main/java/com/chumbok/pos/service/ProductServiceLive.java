@@ -72,9 +72,9 @@ return product;
     }
 
     @Override
-    public void updateProduct(Long id, Product product) {
+    public void updateProduct(Product product) {
 
-        Product productById = productRepository.findOne(id);
+        Product productById = productRepository.findOne(product.getId());
 
         productById.setDisplayName(product.getDisplayName());
         productById.setVendor(product.getVendor());
